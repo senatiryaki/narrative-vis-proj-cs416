@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>What Drives Student Stress?</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-frame">
+
+    <header class="top-bar">
+      <h1>What Drives Student Stress?</h1>
+      <p class="subtitle">
+        Causes, a closer look, and consequences. Then explore the data yourself.
+      </p>
+    </header>
+
+    <main class="content-row">
+      <section class="left-col">
+        <h2 id="scene-heading"></h2>
+        <p id="scene-text"></p>
+      </section>
+
+      <section class="chart-box">
+        <div id="explore-controls" hidden>
+          <label for="explore-select">
+            See the effect of stress on:
+          </label>
+
+          <select id="explore-select">
+            <option value="academic_performance">
+              Academic performance
+            </option>
+            <option value="social_support">
+              Social support
+            </option>
+            <option value="sleep_quality">
+              Sleep quality
+            </option>
+            <option value="anxiety_level">
+              Anxiety level
+            </option>
+            <option value="depression">
+              Depression
+            </option>
+          </select>
+
+          <button id="reset-btn" type="button">
+            Reset
+          </button>
+        </div>
+
+        <svg id="chart"></svg>
+
+        <p id="scene1-legend" class="chart-legend">
+          Red = higher values associated with more stress |
+          Green = associated with less stress
+        </p>
+
+        <p class="chart-hint">
+          (Hover over any bar for its exact value)
+        </p>
+      </section>
+    </main>
+
+    <footer class="bottom-bar">
+      <div class="scene-nav">
+        <button id="prev-btn" type="button">
+          Previous
+        </button>
+
+        <span id="scene-counter"></span>
+
+        <button id="next-btn" type="button">
+          Next
+        </button>
+      </div>
+
+      <p class="source-note">
+        Data: <em>Student Stress Factors</em> (1,100 responses), from
+        <a
+          href="https://www.kaggle.com/datasets/rxnach/student-stress-factors-a-comprehensive-analysis"
+          target="_blank"
+          rel="noopener"
+        >Kaggle</a>.
+      </p>
+    </footer>
+
+  </div>
+
+  <div id="tooltip" hidden></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
