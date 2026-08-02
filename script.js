@@ -129,7 +129,7 @@ function drawScene1() {
       "Comparing each factor in the survey to students' reported stress level, " +
       "bullying shows the strongest relationship with stress, with future career " +
       "concerns, anxiety, and depression close behind. Factors like self-esteem " +
-      "and sleep quality run the other way. Higher values are associated with " +
+      "and sleep quality run the other way: higher values are associated with " +
       "lower stress. Hover any bar to see its exact correlation value."
     );
 
